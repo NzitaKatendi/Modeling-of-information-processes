@@ -71,13 +71,13 @@ section-titles: true
 
 Запустил его командой $ns$.
 
-![Запуск симулятора lab3.tcl](image/image3.png){ #fig:003 width=70% }
+![Запуск симулятора lab3.tcl](image/image3.png){ #fig:004 width=70% }
 
 После компиляции файла проекта я запустил сценарий для сгенерированного файла Graph_plot, который создал файл qm.pdf с результатами моделирования.
 
-![Запуск симулятора graph_plot](image/image4.png){ #fig:004 width=70% }
+![Запуск симулятора graph_plot](image/image4.png){ #fig:005 width=70% }
 
-![Результаты моделирования](image/image5.png){ #fig:005 width=70% }
+![Результаты моделирования](image/image5.png){ #fig:006 width=70% }
 
 
 # Выводы
