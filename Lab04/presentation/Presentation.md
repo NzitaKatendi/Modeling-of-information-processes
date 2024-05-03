@@ -74,7 +74,7 @@ section-titles: true
 
 TCP (Transmission Control Protocol) - это одsetин из основных протоколов интернет-связи. Он отвечает за надежную доставку данных между двумя устройствами в сети. TCP работает в модели транспортного уровня стека протоколов TCP/IP.
 
-
+<!--
 # Создание обьекта SImulator
 set ns [new Simulator]
 
@@ -212,7 +212,7 @@ $ns at 20.0 "finish"
 
 $ns run
 
-
+-->
 ![Схема моделируемой сети при N= 40](image/image1.png){ #fig:001 width=70% }
 
 ![Схема моделируемой сети при N= 40](image/image2.png){ #fig:002 width=70% }
@@ -232,7 +232,7 @@ $ns run
 маршрутизаторе.
 
 Я создал новый файлgraph_plot_lab4 и написал следующий код
-
+<!--
 #!/usr/bin/gnuplot -persist
 
 set encoding utf8
@@ -267,6 +267,7 @@ set xlabel "t[s]" font "Arial, 10"
 set ylabel "Queue AVeg length [pkt]" font "Arial, 10"
 plot "temp.a" using ($1):($2) with lines title "Средняя длина очереди"
 
+-->
 
 ![Изменение размера окна TCP на линке 1-го источника при N=40](image/image6.png){ #fig:006 width=70% }
 
