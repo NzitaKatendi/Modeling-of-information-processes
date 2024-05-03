@@ -74,32 +74,32 @@ section-titles: true
 
 TCP (Transmission Control Protocol) - это одsetин из основных протоколов интернет-связи. Он отвечает за надежную доставку данных между двумя устройствами в сети. TCP работает в модели транспортного уровня стека протоколов TCP/IP.
 
-<!--
-# Создание обьекта SImulator
+
+### Создание обьекта SImulator
 set ns [new Simulator]
 
-#  открытие на запись файла out.nam для визуализатора nam
+###  открытие на запись файла out.nam для визуализатора nam
 
 set nf [open out.nam w]
 
-# все результаты моделирования будут записаны в переменную nf
+### все результаты моделирования будут записаны в переменную nf
 
 $ns namtrace-all $nf
 
-# открытие на запись файла трассировки out.tr
-# для регистрации всех событий
+### открытие на запись файла трассировки out.tr
+### для регистрации всех событий
 
 set f [open out.tr w]
 
-# все регистрируемые события будут записаны в переменную 
+### все регистрируемые события будут записаны в переменную 
 
 $ns trace-all $f
 
 Agent/TCP set window_ 32
 Agent/TCP set pktSize_ 500
 
-# процедура finish закрывает файлы трассировки
-# и запускает визуализатор nam
+### процедура finish закрывает файлы трассировки
+### и запускает визуализатор nam
 
 proc finish {} {
 	global tchan_
@@ -128,7 +128,7 @@ puts $f "O.color Purple"
 
 exec awk $awkCode all.q
 
-# Запуск xgraph с графиками окна TCP и очереди:
+### Запуск xgraph с графиками окна TCP и очереди:
 
 exec xgraph -fg pink -bg purple -bb -tk -x time -t "TCPRenoCWND" WindowVsTimeRenoOne &
 exec xgraph -fg pink -bg purple -bb -tk -x time -t "TCPRenoCWND" WindowVsTimeRenoAll &
@@ -138,7 +138,7 @@ exec nam out.nam &
 exit 0
 }
 
-# Формирование файла с данными о размере окна TCP:
+### Формирование файла с данными о размере окна TCP:
 proc plotWindow {tcpSource file} {
 	global ns
 	set time 0.01
@@ -151,13 +151,13 @@ proc plotWindow {tcpSource file} {
 set r1 [$ns node]
 set r2 [$ns node]
 
-# Соединения:
+### Соединения:
 
 $ns simplex-link $r1 $r2 20Mb 15ms RED
 $ns simplex-link $r2 $r1 15Mb 20ms DropTail
 $ns queue-limit $r1 $r2 300
 
- # Узлы сети:
+ ### Узлы сети:
 
 set N 40
 
@@ -171,7 +171,7 @@ for {set i 0} {$i < $N} {incr i} {
 	set ftp($i) [$tcp($i) attach-source FTP]
 }
 
-# Мониторинг размера окна TCP:
+### Мониторинг размера окна TCP:
 set windowVsTimeOne [open windowVsTimeRenoOne  w]
 puts $windowVsTimeOne "O.Color: white"
 set windowVsTimeAll [open windowVsTimeRenoAll  w]
@@ -180,7 +180,7 @@ puts $windowVsTimeAll "O.Color: white"
 set qmon [$ns monitor-queue $r1 $r2 [open qm.out w] 0.1];
 [$ns link $r1 $r2] queue-sample-timeout;
 
-# Мониторинг очереди:
+### Мониторинг очереди:
 
 set redq [[$ns link $r1 $r2] queue]
 $redq set thresh_ 75
@@ -193,7 +193,7 @@ $redq trace curq_
 $redq trace ave_
 $redq attach $tchan_
 
-# Добавление at-событий:
+### Добавление at-событий:
 
 for {set i 0} {$i < $N} {incr i} {
 	$ns at 0.0 "$ftp($i) start"
@@ -202,8 +202,8 @@ for {set i 0} {$i < $N} {incr i} {
 
 $ns at 0.0 "plotWindow $tcp(1) $windowVsTimeOne"
 
-# at-событие для планировщика событий, которое запускает
-# процедуру finish at через 20 с после начала моделирования
+### at-событие для планировщика событий, которое запускает
+### процедуру finish at через 20 с после начала моделирования
 
 $ns at 20.0 "finish"
 
@@ -232,7 +232,7 @@ $ns run
 маршрутизаторе.
 
 Я создал новый файлgraph_plot_lab4 и написал следующий код
-<!--
+
 #!/usr/bin/gnuplot -persist
 
 set encoding utf8
@@ -267,7 +267,7 @@ set xlabel "t[s]" font "Arial, 10"
 set ylabel "Queue AVeg length [pkt]" font "Arial, 10"
 plot "temp.a" using ($1):($2) with lines title "Средняя длина очереди"
 
--->
+
 
 ![Изменение размера окна TCP на линке 1-го источника при N=40](image/image6.png){ #fig:006 width=70% }
 
@@ -282,4 +282,4 @@ plot "temp.a" using ($1):($2) with lines title "Средняя длина оче
 
 # Выводы
 
-Выводы моделирования позволяют понять влияние параметров сети на производительность передачи дРезультаты моделирования позволяют понять влияние сетевых параметров на производительность данных и эффективность управления трафиком, а также создать графики для изменения размера окна TCP, изменения длины очереди и средней длины очереди.
+Результаты моделирования позволяют понять влияние сетевых параметров на производительность данных и эффективность управления трафиком, а также создать графики для изменения размера окна TCP, изменения длины очереди и средней длины очереди.
