@@ -88,23 +88,23 @@ header-includes:
 ![Я создал новый файл lab4 и отредактировал его](image/image1.png){ #fig:006 width=70% }
 ##
 ---
-![Схема моделируемой сети при N= 40](image/image2.png){ #fig:002 width=70% }
+![Схема моделируемой сети при N= 35](image/image2.png){ #fig:002 width=70% }
 
 ---
 
-![Схема моделируемой сети при N= 40](image/image3.png){ #fig:003 width=70% }
+![Схема моделируемой сети при N= 35](image/image3.png){ #fig:003 width=70% }
 
 ---
 
-![Схема моделируемой сети при N= 40](image/image4.png){ #fig:004 width=70% }
+![Схема моделируемой сети при N= 35](image/image4.png){ #fig:004 width=70% }
 
 ---
 
-![Схема моделируемой сети при N= 40](image/image5.png){ #fig:005 width=70% }
+![Схема моделируемой сети при N= 35](image/image5.png){ #fig:005 width=70% }
 
 ---
 
-![Схема моделируемой сети при N= 40](image/image6.png){ #fig:006 width=70% }
+![Схема моделируемой сети при N= 35](image/image6.png){ #fig:006 width=70% }
 
 ---
 
@@ -121,19 +121,19 @@ header-includes:
 ![создал новый файлgraph_plot_lab4](image/image7.png){ #fig:007 width=70% }
 
 ---
-![Изменение размера окна TCP на линке 1-го источника при N=40](image/image8.png){ #fig:008 width=70% }
+![Изменение размера окна TCP на линке 1-го источника при N=35](image/image8.png){ #fig:008 width=70% }
 
 ---
 
-![Изменение размера окна TCP на всех источниках при N=40](image/image9.png){ #fig:009 width=70% }
+![Изменение размера окна TCP на всех источниках при N=35](image/image9.png){ #fig:009 width=70% }
 
 ---
 
-![Изменение размера длины очереди на линке (R1–R2) при N=20, qmin = 75, qmax = 150](image/image10.png){ #fig:010 width=70% }
+![Изменение размера длины очереди на линке (R1–R2) при N=35, qmin = 75, qmax = 150](image/image10.png){ #fig:010 width=70% }
 
 ---
 
-![Изменение размера средней длины очереди на линке (R1–R2) при N=20, qmin = 75, qmax = 150 ](image/image11.png){ #fig:011 width=70% }
+![Изменение размера средней длины очереди на линке (R1–R2) при N=35, qmin = 75, qmax = 150 ](image/image11.png){ #fig:011 width=70% }
 
 ---
 
