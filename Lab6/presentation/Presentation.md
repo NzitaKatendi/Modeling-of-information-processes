@@ -44,7 +44,7 @@ section-titles: true
 
 ## Цель лабораторной работы
 
-Целью данной работы является построение модели эпидемии.
+Целью данной работы является построение модели «хищник-жертва».
  
 ---
 
@@ -69,7 +69,6 @@ section-titles: true
 
 ---
 
-
 ![Фазовый портрет модели 6.1 при a = 2, b = 1, c = 0, 3, d = 1, x(0) = 2, y(0) = 1](image/image4.png){ #fig:004 width=70% }
 
 ---
@@ -78,10 +77,16 @@ section-titles: true
 
 ---
 
-![Эпидемический порог модели SIR при В = 1, v = 0.3](image/image6.png){ #fig:006 width=70% }
+![Параметры блока Modelica для модели](image/image6.png){ #fig:006 width=70% }
+
+Запустив, получим аналогичный график как в пункте 3.
+Перейдем к реализации на OpenModelica.
 
 ---
 ##  Задание для самостоятельного выполнения
+
+Упражнение. Реализуйте модель «хищник – жертва» в OpenModelica. Постройте
+графики изменения численности популяций и фазовый портрет
 
 1. xcos + modelica
 
@@ -89,15 +94,15 @@ section-titles: true
 
 ---
 
-![Редактор OMEdit, Simulation Setup](image/image8.png){ #fig:008 width=70% }
+![Динамика изменений отдельных хищников и жертвенных моделей в OpenModelica](image/image8.png){ #fig:008 width=70% }
 
 ---
 2. OpenModelicq
 
-![SIR](image/image9.png){ #fig:009 width=70% }
+![Фазовый портрет модели в OpenMadelica](image/image9.png){ #fig:009 width=70% }
 
 ---
 
 # Выводы
 
-Мы реализовали модель "Хищник-жертва" в x cos, modelica и OpenModelica.
+Мы реализовали модель "Хищник-жертва" в xcos, modelica и OpenModelica.
