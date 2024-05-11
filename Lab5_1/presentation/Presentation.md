@@ -29,7 +29,7 @@ section-titles: true
 * Нзита Диатезилуа Катенди
 * студент группы НКНбд-01-21
 * Российский университет дружбы народов
-* [https://github.com/NzitaKatendi/Modeling-of-information-processes](https://github.com/NzitaKatendi/Modeling-of-information-processes)
+* [https://github.com/NzitaKatendi/Modeling-of-information-processes]
 
 :::
 ::: {.column width="30%"}
@@ -89,20 +89,31 @@ section-titles: true
 
 1. xcos + modelica
 
-![](image/image7.png){ #fig:007 width=70% }
+![xcos + modelica](image/image7.png){ #fig:007 width=70% }
 
 ---
 
-![Редактор OMEdit, Simulation Setup](image/image8.png){ #fig:008 width=70% }
+![Параметры блока Modelica для модели](image/image8.png){ #fig:008 width=70% }
 
 ---
 
-2. OpenModelicq
-
-![SIR](image/image9.png){ #fig:009 width=70% }
+![Реализуйте модель SIR в OpenModelica](image/image9.png){ #fig:009 width=70% }
 
 ---
+
+![SIR](image/image10.png){ #fig:010 width=70% }
+
+---
+
+![Реализуйте модель SIR в OpenModelica](image/image11.png){ #fig:011 width=70% }
+
+---
+
+![OpenModelica](image/image12.png){ #fig:012 width=70% }
+
+---
+
 
 # Выводы
 
-Мы реализовали модель "Хищник-жертва" в x cos, modelica и OpenModelica.
+Мы реализовали модель эпидемии в xcos, modelica и OpenModelica.
